@@ -1,3 +1,26 @@
 <resources>
-    <string name="app_name">kodetestproject</string>
+    <string name="app_name">Кодер</string>
+    <string name="search_placeholder">Введи имя, тег, почту…</string>
+    <string name="all">Все</string>
+    <string name="designers">Designers</string>
+    <string name="analysts">Analysts</string>
+    <string name="managers">Managers</string>
+    <string name="ios">iOS</string>
+    <string name="android">Android</string>
+    <string name="qa">QA</string>
+    <string name="backenders">Backanders</string>
+    <string name="hr">HR</string>
+    <string name="pr">PR</string>
+    <string name="support">Support</string>
+    <string name="frontenders">Frontenders</string>
+    <string name="backoffice">Back-office</string>
+    <string name="not_found_anybody">Мы никого не нашли</string>
+    <string name="try_correct_request">Попробуй скорректировать запрос</string>
+    <string name="sort">Сортировка</string>
+    <string name="sort_abc">По алфавиту</string>
+    <string name="sort_birthday">По дню рождения</string>
+    <string name="error_screen_all_breaks">Какой-то сверхразум все сломал</string>
+    <string name="error_screen_try_fix">Постараемся все починить</string>
+    <string name="error_screen_try_again">Попробовать снова</string>
+    <string name="cancel">Отмена</string>
 </resources>
