@@ -12,6 +12,10 @@ private val InterRegular = FontFamily(Font(R.font.inter_regular))
 private val InterSemiBold = FontFamily(Font(R.font.inter_semibold))
 private val InterMedium = FontFamily(Font(R.font.inter_medium))
 
+/**
+ * Fonts for the project.
+ * Colors is hardcoded.
+ */
 val Title1Bold = TextStyle(
     fontFamily = InterBold,
     fontSize = 24.sp,
@@ -82,9 +86,23 @@ val Text2Medium = TextStyle(
     color = Color(0xFF97979B)
 )
 
+val Text3Medium = TextStyle(
+    fontFamily = InterMedium,
+    fontSize = 15.sp,
+    lineHeight = 20.sp,
+    color = Color(0xFF050510)
+)
+
 val SubheadMedium = TextStyle(
     fontFamily = InterMedium,
     fontSize = 14.sp,
     lineHeight = 18.sp,
     color = Color(0xFF97979B)
+)
+
+val SubheadSemibold = TextStyle(
+    fontFamily = InterSemiBold,
+    fontSize = 14.sp,
+    lineHeight = 18.sp,
+    color = Color(0xFF6534FF)
 )
