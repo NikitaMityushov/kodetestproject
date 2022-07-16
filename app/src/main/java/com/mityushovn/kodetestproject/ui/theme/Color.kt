@@ -10,6 +10,7 @@ private val Background = Color(0xFFE5E5E5) // фон для списка
 private val ErrorBackground = Color(0xFFF44336)
 private val OnSurface = Color(0xFFC3C3C6) // цвет иконок на search bar, цвет шрифта хардкодил
 private val PrimaryVariant = Color(0x29050510) // затемнение в modal sheet
+private val OnPrimary = Color(0xFF050510) // черный для шрифтов при выделении
 
 /*
     1) primary - main brand color
@@ -19,6 +20,7 @@ private val PrimaryVariant = Color(0x29050510) // затемнение в modal 
  */
 val LightColorPalette = lightColors(
     primaryVariant = PrimaryVariant,
+    onPrimary = OnPrimary,
     secondary = Secondary,
     onSecondary = Color.White,
     background = Background,
@@ -30,6 +32,7 @@ val LightColorPalette = lightColors(
 
 val DarkColorPalette = darkColors(
     primaryVariant = PrimaryVariant,
+    onPrimary = OnPrimary,
     secondary = Secondary,
     onSecondary = Color.White,
     background = Background,
