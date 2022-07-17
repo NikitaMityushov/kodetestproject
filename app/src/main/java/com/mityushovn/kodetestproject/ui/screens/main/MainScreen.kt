@@ -6,7 +6,6 @@ import androidx.compose.material.Surface
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.mityushovn.kodetestproject.ui.components.SearchBar
 import com.mityushovn.kodetestproject.ui.screens.main.searchbar.SearchBar
 import com.mityushovn.kodetestproject.ui.theme.KodeTheme
 
