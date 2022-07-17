@@ -6,7 +6,7 @@ import androidx.compose.runtime.staticCompositionLocalOf
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.TextStyle
 
-val LocalKodeColors = staticCompositionLocalOf {
+private val LocalKodeColors = staticCompositionLocalOf {
     KodeColors(
         background = Color.Unspecified,
         backgroundPrimary = Color.Unspecified,
@@ -24,7 +24,7 @@ val LocalKodeColors = staticCompositionLocalOf {
     )
 }
 
-val LocalKodeTypography = staticCompositionLocalOf {
+private val LocalKodeTypography = staticCompositionLocalOf {
     KodeTypography(
         title1Bold = TextStyle.Default,
         title2SemiBold = TextStyle.Default,
@@ -41,10 +41,11 @@ val LocalKodeTypography = staticCompositionLocalOf {
     )
 }
 
-
+/**
+ * Theme of the project
+ */
 @Composable
 fun KodeTheme(
-//    darkTheme: Boolean = isSystemInDarkTheme(),
     content: @Composable () -> Unit
 ) {
     val colors = kodeLightColors
@@ -57,10 +58,20 @@ fun KodeTheme(
     )
 }
 
+/**
+ * Contains functions to access the current theme values provided at the call site's position in the hierarchy.
+ */
 object KodeTheme {
+    /**
+     * Retrieves the current [KodeColors]
+     */
     val colors: KodeColors
         @Composable
         get() = LocalKodeColors.current
+
+    /**
+     * Retrieves the current [KodeTypography]
+     */
     val typography: KodeTypography
         @Composable
         get() = LocalKodeTypography.current

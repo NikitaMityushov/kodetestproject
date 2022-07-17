@@ -5,11 +5,11 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.TextStyle
 
 /**
- * Custom design system implementation for the project
+ * Custom design system implementation of the project
  */
 
 /**
- * Colors
+ * Kode design color system
  */
 @Immutable
 data class KodeColors(
@@ -33,7 +33,7 @@ data class KodeColors(
 )
 
 /**
- * Typography
+ * Kode design typography system
  */
 @Immutable
 data class KodeTypography(

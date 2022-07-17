@@ -2,6 +2,9 @@ package com.mityushovn.kodetestproject.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
+/**
+ * Colors
+ */
 private val ContentActivePrimary = Color(0xFF6534FF) // для выделений
 private val ContentActiveSecondary = Color(0xFF050510) // для выделений
 private val ContentDefaultPrimary = Color(0xFFC3C3C6)
@@ -18,7 +21,7 @@ private val TextTertiary = Color(0xFF97979B)
 private val TextButton = Color(0xFFFFFFFF)
 
 /**
- * Colors instance for the project theme
+ * [KodeColors] instance for the project theme
  */
 val kodeLightColors = KodeColors(
     background = Background,

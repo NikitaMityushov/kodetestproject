@@ -115,8 +115,6 @@ fun PreviewSearchBar(
                     onClickTrailingIcon = onClickTrailingButton
                 )
             }
-
         }
     }
-
 }
