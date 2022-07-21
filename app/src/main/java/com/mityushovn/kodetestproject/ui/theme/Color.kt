@@ -19,6 +19,9 @@ private val TextPrimary = Color(0xFF050510) // черный для шрифто�
 private val TextSecondary = Color(0xFF55555C)
 private val TextTertiary = Color(0xFF97979B)
 private val TextButton = Color(0xFFFFFFFF)
+private val SkeletonGradient0 = Color(0xFFF3F3F6)
+private val SkeletonGradient1 = Color(0xFFFAFAFA)
+
 
 /**
  * [KodeColors] instance for the project theme
@@ -36,5 +39,7 @@ val kodeLightColors = KodeColors(
     textPrimary = TextPrimary,
     textSecondary = TextSecondary,
     textTertiary = TextTertiary,
-    textButton = TextButton
+    textButton = TextButton,
+    skeletonGradient0 = SkeletonGradient0,
+    skeletonGradient1 = SkeletonGradient1
 )

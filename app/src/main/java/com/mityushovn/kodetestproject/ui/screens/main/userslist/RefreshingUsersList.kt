@@ -1,60 +1,59 @@
 package com.mityushovn.kodetestproject.ui.screens.main.userslist
 
-import androidx.compose.foundation.layout.PaddingValues
-import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.lazy.LazyColumn
-import androidx.compose.foundation.lazy.items
-import androidx.compose.foundation.lazy.rememberLazyListState
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import androidx.compose.ui.unit.dp
+import com.google.accompanist.swiperefresh.SwipeRefresh
+import com.google.accompanist.swiperefresh.SwipeRefreshIndicator
+import com.google.accompanist.swiperefresh.rememberSwipeRefreshState
 import com.mityushovn.kodetestproject.domain.models.UserDomain
 import com.mityushovn.kodetestproject.ui.theme.KodeTheme
-import kotlinx.coroutines.launch
-
-private const val START_POSITION = 0
 
 /**
- * UsersList component.
+ * Represents users list on the screen.
+ * Refreshes list when user swipes down on the screen.
  */
 @Composable
-fun UsersList(
+fun RefreshingUsersList(
     modifier: Modifier = Modifier,
     list: List<UserDomain>,
-    onListItemClick: (UserDomain) -> Unit
+    isRefreshing: Boolean,
+    onRefresh: () -> Unit,
+    onListItemClick: (UserDomain) -> Unit,
 ) {
-    /*
-     *  is used to store the current list state.
-     */
-    val listState = rememberLazyListState()
-    val scope = rememberCoroutineScope()
-
-    LazyColumn(
-        modifier = modifier,
-        state = listState,
-        contentPadding = PaddingValues(top = 16.dp)
-    ) {
-        this.items(key = { user -> user.id }, items = list) { user ->
-            UsersListItem(
-                userDomain = user,
-                modifier = Modifier.padding(top = 6.dp, bottom = 6.dp),
-                onListItemClick = onListItemClick
+    SwipeRefresh(
+        state = rememberSwipeRefreshState(isRefreshing = isRefreshing),
+        onRefresh = { onRefresh() },
+        indicator = { state, trigger ->
+            SwipeRefreshIndicator(
+                state = state,
+                refreshTriggerDistance = trigger,
+                contentColor = KodeTheme.colors.contentActivePrimary
             )
         }
-        /*
-            scrolling to the first lists item after each filter changes
-         */
-        scope.launch {
-            listState.scrollToItem(START_POSITION)
+    ) {
+
+        if (isRefreshing) {
+            ShimmerUserList()
+        } else {
+            if (list.isEmpty()) {
+                UsersNotFound(
+                    modifier = Modifier.fillMaxWidth()
+                )
+            } else {
+                UsersList(modifier, list, onListItemClick)
+            }
         }
     }
 }
 
+/**
+ * Preview of [RefreshingUsersList].
+ */
 @Preview(showBackground = true)
 @Composable
-fun UsersListPreview() {
+fun PreviewRefreshingUsersList() {
     val sourceList = listOf(
         UserDomain(
             id = "1",
@@ -93,13 +92,11 @@ fun UsersListPreview() {
             birthdate = "01.01.2000",
         )
     )
-
     KodeTheme {
-        UsersList(
+        RefreshingUsersList(
             list = sourceList,
-            onListItemClick = {}
-        )
+            onListItemClick = {},
+            isRefreshing = false,
+            onRefresh = {})
     }
 }
-
-
