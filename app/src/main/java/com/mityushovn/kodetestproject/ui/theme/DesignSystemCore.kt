@@ -29,7 +29,9 @@ data class KodeColors(
     val textPrimary: Color,
     val textSecondary: Color,
     val textTertiary: Color,
-    val textButton: Color
+    val textButton: Color,
+    val skeletonGradient0: Color,
+    val skeletonGradient1: Color
 )
 
 /**

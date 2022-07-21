@@ -15,11 +15,12 @@ import androidx.compose.ui.unit.dp
 import com.mityushovn.kodetestproject.R
 import com.mityushovn.kodetestproject.ui.components.BaseSearchBar
 import com.mityushovn.kodetestproject.ui.theme.KodeTheme
+import com.mityushovn.kodetestproject.ui.screens.main.MainScreen
 
 private const val EMPTY_STRING = ""
 
 /**
- * Search bar implementation for the Main Screen composable function.
+ * Search bar implementation for the [MainScreen] composable function.
  */
 @Composable
 fun SearchBar(
@@ -77,7 +78,7 @@ fun SearchBar(
 }
 
 /**
- * Preview night and day modes
+ * Search bar preview.
  */
 @Preview(
     name = "Day mode",

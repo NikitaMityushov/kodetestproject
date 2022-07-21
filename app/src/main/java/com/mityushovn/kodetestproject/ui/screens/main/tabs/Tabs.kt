@@ -11,7 +11,11 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.mityushovn.kodetestproject.ui.theme.KodeTheme
+import com.mityushovn.kodetestproject.ui.screens.main.MainScreen
 
+/**
+ * [MainScreen] Tabs component.
+ */
 @Composable
 fun Tabs(
     modifier: Modifier = Modifier,

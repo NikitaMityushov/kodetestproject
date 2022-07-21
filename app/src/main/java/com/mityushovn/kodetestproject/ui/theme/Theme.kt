@@ -8,19 +8,21 @@ import androidx.compose.ui.text.TextStyle
 
 private val LocalKodeColors = staticCompositionLocalOf {
     KodeColors(
-        background = Color.Unspecified,
         backgroundPrimary = Color.Unspecified,
         backgroundSecondary = Color.Unspecified,
+        background = Color.Unspecified,
         backgroundTransparent = Color.Unspecified,
         errorBackground = Color.Unspecified,
         contentActivePrimary = Color.Unspecified,
-        contentDefaultSecondary = Color.Unspecified,
         contentActiveSecondary = Color.Unspecified,
         contentDefaultPrimary = Color.Unspecified,
-        textButton = Color.Unspecified,
+        contentDefaultSecondary = Color.Unspecified,
         textPrimary = Color.Unspecified,
         textSecondary = Color.Unspecified,
         textTertiary = Color.Unspecified,
+        textButton = Color.Unspecified,
+        skeletonGradient0 = Color.Unspecified,
+        skeletonGradient1 = Color.Unspecified,
     )
 }
 
@@ -42,7 +44,7 @@ private val LocalKodeTypography = staticCompositionLocalOf {
 }
 
 /**
- * Theme of the project
+ * Provides a set of colors and typography styles to be used in the Kode application.
  */
 @Composable
 fun KodeTheme(
