@@ -3,14 +3,14 @@ package com.mityushovn.kodetestproject.utils.mvi_interfaces
 /**
  * Reducer in the MVI pattern.
  */
-typealias Reducer = (UiState, Effect) -> UiState
+typealias Reducer = (UiState, UiIntent) -> UiState
 
 /**
  *  Updates the state of the UI.
  */
 fun reduce(
     prevState: UiState,
-    effect: Effect,
+    intent: UiIntent,
     reducer: Reducer
 ): UiState =
-    reducer(prevState, effect)
+    reducer(prevState, intent)
